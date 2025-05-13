@@ -18,10 +18,47 @@
     <LibraryReferences>{62cba764-9de2-4ae6-b235-7059fe4fdae7}</LibraryReferences>
     <Company>NewEngineer</Company>
     <Released>false</Released>
-    <Title>Modbus RTU Custom</Title>
+    <Title>Modbus RTU Base</Title>
+    <ProjectVersion>1.1.1.1</ProjectVersion>
+    <Author>https://github.com/phucpha</Author>
+    <DefaultNamespace>MODBUSRTU</DefaultNamespace>
+    <Placeholder>MODBUSRTU</Placeholder>
+    <Description>This Library is a use for Modbus Master and modbus Slave as Function block base for modbus RTU applications</Description>
+    <DocFormat>reStructuredText</DocFormat>
+    <LibraryCategories>
+      <LibraryCategory xmlns="">
+        <Id>{af40b50a-0813-4efb-a4bd-2b85a2b369a6}</Id>
+        <Version>1.0.0.0</Version>
+        <DefaultName>ModbusRTU</DefaultName>
+      </LibraryCategory>
+    </LibraryCategories>
+    <SelectedLibraryCategories>
+      <Id xmlns="">{af40b50a-0813-4efb-a4bd-2b85a2b369a6}</Id>
+    </SelectedLibraryCategories>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="DUTs\E_ModbusFunction.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\E_ModBusMasterState.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="DUTs\E_ModbusMasterStateRun.TcDUT">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\FB_ModbusMaster_PcCOM.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\FB_ModbusSlave.TcPOU">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="POUs\I_ModbusSlave.TcIO">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Version\Global_Version.TcGVL">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
@@ -29,6 +66,26 @@
     <Folder Include="DUTs" />
     <Folder Include="GVLs" />
     <Folder Include="POUs" />
+    <Folder Include="Version" />
+  </ItemGroup>
+  <ItemGroup>
+    <PlaceholderReference Include="Tc2_ModbusRTU">
+      <DefaultResolution>Tc2_ModbusRTU, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_ModbusRTU</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc2_Standard">
+      <DefaultResolution>Tc2_Standard, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc2_Standard</Namespace>
+    </PlaceholderReference>
+    <PlaceholderReference Include="Tc3_Module">
+      <DefaultResolution>Tc3_Module, * (Beckhoff Automation GmbH)</DefaultResolution>
+      <Namespace>Tc3_Module</Namespace>
+    </PlaceholderReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="IPC.tmc">
+      <SubType>Content</SubType>
+    </None>
   </ItemGroup>
   <ProjectExtensions>
     <PlcProjectOptions>
