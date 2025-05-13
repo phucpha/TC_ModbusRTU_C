@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <FileVersion>1.0.0.0</FileVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{19843d85-2396-49d2-9217-be6864f47664}</ProjectGuid>
+    <SubObjectsSortedByName>True</SubObjectsSortedByName>
+    <DownloadApplicationInfo>true</DownloadApplicationInfo>
+    <WriteProductVersion>true</WriteProductVersion>
+    <GenerateTpy>false</GenerateTpy>
+    <Name>IPC</Name>
+    <ProgramVersion>3.1.4024.0</ProgramVersion>
+    <Application>{08092ae3-420e-433e-81ea-bee8cf03e9d1}</Application>
+    <TypeSystem>{4d8f383a-85d9-4723-a17b-b07e5448dc5b}</TypeSystem>
+    <Implicit_Task_Info>{d50d976f-727e-46ac-93f0-8ce349d77542}</Implicit_Task_Info>
+    <Implicit_KindOfTask>{208ebb74-1bdc-491d-86b5-a2cad61dd1bb}</Implicit_KindOfTask>
+    <Implicit_Jitter_Distribution>{2e1711f1-6732-48e3-96b7-2b4444ec8de2}</Implicit_Jitter_Distribution>
+    <LibraryReferences>{62cba764-9de2-4ae6-b235-7059fe4fdae7}</LibraryReferences>
+    <Company>NewEngineer</Company>
+    <Released>false</Released>
+    <Title>Modbus RTU Custom</Title>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="PlcTask.TcTTO">
+      <SubType>Code</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DUTs" />
+    <Folder Include="GVLs" />
+    <Folder Include="POUs" />
+  </ItemGroup>
+  <ProjectExtensions>
+    <PlcProjectOptions>
+      <XmlArchive>
+        <Data>
+          <o xml:space="preserve" t="OptionKey">
+      <v n="Name">"&lt;ProjectRoot&gt;"</v>
+      <d n="SubKeys" t="Hashtable" />
+      <d n="Values" t="Hashtable" />
+    </o>
+        </Data>
+        <TypeList>
+          <Type n="Hashtable">System.Collections.Hashtable</Type>
+          <Type n="OptionKey">{54dd0eac-a6d8-46f2-8c27-2f43c7e49861}</Type>
+          <Type n="String">System.String</Type>
+        </TypeList>
+      </XmlArchive>
+    </PlcProjectOptions>
+  </ProjectExtensions>
+</Project>
